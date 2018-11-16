@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319191254) do
+ActiveRecord::Schema.define(version: 20181116213707) do
 
   create_table "photos", force: :cascade do |t|
     t.integer  "user_id"
@@ -22,7 +22,18 @@ ActiveRecord::Schema.define(version: 20150319191254) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "title"
   end
+
+  create_table "relations", force: :cascade do |t|
+    t.string   "follower"
+    t.string   "following"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "relations", ["user_id"], name: "index_relations_on_user_id"
 
   create_table "tags", force: :cascade do |t|
     t.integer "user_id"
