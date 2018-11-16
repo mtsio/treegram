@@ -20,6 +20,8 @@
 .row
   - @user.photos.each  do |photo|
     .well.col-sm-4
+      = photo.title
+      %br
       = image_tag photo.image.url(:medium)
       = form_for @tag do |f|
         = f.hidden_field :photo_id, value: photo.id
