@@ -2,6 +2,14 @@
 %br
 - current_user = session[:user_id]
 - @users.each do |user|
-  %h3= user.email unless user.id == current_user
+  -unless user.id == current_user
+    %h3= user.email 
+    - if user.avatar_file_name
+      = image_tag user.avatar.url(:thumb)
+ 
+
+
+
+
 
 
