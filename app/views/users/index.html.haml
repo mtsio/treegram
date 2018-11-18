@@ -3,9 +3,14 @@
 - current_user = session[:user_id]
 - @users.each do |user|
   -unless user.id == current_user
-    %h3= user.email 
-    - if user.avatar_file_name
-      = image_tag user.avatar.url(:thumb)
+    .row
+      .well.col-sm-4
+        = user.email
+        =link_to 'Follow', new_relation_path(@user),
+        class: ['btn', 'btn-sm', 'btn-primary']
+        .col
+          - if user.avatar_file_name
+            = image_tag user.avatar.url(:thumb)
  
 
 
