@@ -1,0 +1,7 @@
+%h2 Registered Users:
+%br
+- current_user = session[:user_id]
+- @users.each do |user|
+  %h3= user.email unless user.id == current_user
+
+
