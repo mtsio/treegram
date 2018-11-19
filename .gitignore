@@ -1,0 +1,10 @@
+vendor/
+vendor/**
+tmp/
+tmp/**
+photos/
+photos/**
+lib/
+lib/**
+bin/
+bin/**
