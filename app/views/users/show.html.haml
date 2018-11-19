@@ -31,5 +31,6 @@
         = f.submit "Tag User"
       - photo.tags.each do |tag|
         = tag.user.email
-      .button{class: ["btn","btn-success","pull-right"]}='Comment'
+      = link_to 'Comment', new_user_path, :class => "btn btn-success pull-right"
+
 

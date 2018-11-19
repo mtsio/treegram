@@ -1,6 +1,12 @@
+<<<<<<< master
   [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (2.5ms)[0m  [1m            SELECT sql
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.0ms)[0m  [1m            SELECT sql
+>>>>>>> Add comment controller, and model
             FROM sqlite_master
             WHERE name='index_relations_on_user_id' AND type='index'
             UNION ALL
@@ -8,6 +14,7 @@
             FROM sqlite_temp_master
             WHERE name='index_relations_on_user_id' AND type='index'
 [0m
+<<<<<<< master
 
 
 Started GET "/" for 172.17.0.1 at 2018-11-19 19:43:44 +0000
@@ -5576,3 +5583,20 @@ ActionController::RoutingError (No route matches [GET] "/images/medium/missing.p
   Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
   Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.7ms)
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20181119213926)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (13.1ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119213926"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+>>>>>>> Add comment controller, and model
