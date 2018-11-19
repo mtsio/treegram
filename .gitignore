@@ -8,3 +8,7 @@ lib/
 lib/**
 bin/
 bin/**
+log/
+log/**
+public/
+public/**
