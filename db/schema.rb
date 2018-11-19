@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181116213707) do
+ActiveRecord::Schema.define(version: 20181119202834) do
 
   create_table "photos", force: :cascade do |t|
     t.integer  "user_id"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20181116213707) do
   end
 
   create_table "relations", force: :cascade do |t|
-    t.string   "follower"
-    t.string   "following"
+    t.integer  "following"
+    t.integer  "follower"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

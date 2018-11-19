@@ -6,7 +6,7 @@
     .row
       .well.col-sm-4
         = user.email
-        =link_to 'Follow', new_relation_path(@user),
+        =link_to 'Follow', new_user_relation_path(user.id),
         class: ['btn', 'btn-sm', 'btn-primary']
         .col
           - if user.avatar_file_name

@@ -13,3 +13,4 @@ log/**
 public/
 public/**
 *.sqlite3
+*.log
