@@ -1,0 +1,867 @@
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/" for 172.17.0.1 at 2018-11-19 19:43:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (703.6ms)
+Completed 200 OK in 898ms (Views: 880.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 172.17.0.1 at 2018-11-19 19:43:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (111.2ms)
+Completed 200 OK in 236ms (Views: 228.3ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/users" for 172.17.0.1 at 2018-11-19 19:44:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qYmxCT3HgON+1qipkk3HxixXSUKEZYTZqasqUswoFt0Y9x4tbjMiyIn+4ro0PsRlwtdo3w30tL6rah8HKAshow==", "user"=>{"email"=>"fang@inaccess.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007f9af5d1e290 @tempfile=#<Tempfile:/tmp/RackMultipart20181119-10-1p4l9dy.png>, @original_filename="Screenshot 2018-10-18_21-55-05-428.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"Screenshot 2018-10-18_21-55-05-428.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Sign Up"}
+Command :: file -b --mime '/tmp/600cfcf45bf84726cb077362b3de30ae20181119-10-19kfok8.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d713adea3d0caba06ad6bd55d7bc90cd20181119-10-1rkhnvl.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d713adea3d0caba06ad6bd55d7bc90cd20181119-10-1rkhnvl.png[0]'
+Command :: convert '/tmp/d713adea3d0caba06ad6bd55d7bc90cd20181119-10-1rkhnvl.png[0]' -auto-orient -resize "300x300>" '/tmp/1173a405d1d911486072ae9bc6d8d46420181119-10-1hxqbxs'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d713adea3d0caba06ad6bd55d7bc90cd20181119-10-1rkhnvl.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d713adea3d0caba06ad6bd55d7bc90cd20181119-10-1rkhnvl.png[0]'
+Command :: convert '/tmp/d713adea3d0caba06ad6bd55d7bc90cd20181119-10-1rkhnvl.png[0]' -auto-orient -resize "100x100>" '/tmp/1173a405d1d911486072ae9bc6d8d46420181119-10-1uia04t'
+Command :: file -b --mime '/tmp/600cfcf45bf84726cb077362b3de30ae20181119-10-ra9vrr.png'
+  [1m[35mUser Exists (2.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fang@inaccess.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/600cfcf45bf84726cb077362b3de30ae20181119-10-1dqyyjz.png'
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fang@inaccess.com' LIMIT 1
+  [1m[36mSQL (9.2ms)[0m  [1mINSERT INTO "users" ("email", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "password_salt", "password_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "fang@inaccess.com"], ["avatar_file_name", "Screenshot_2018-10-18_21-55-05-428.png"], ["avatar_content_type", "image/png"], ["avatar_file_size", 1210527], ["avatar_updated_at", "2018-11-19 19:44:30.447783"], ["password_salt", "$2a$10$o.yzGKRByxNjsvvWkhw6j."], ["password_hash", "$2a$10$o.yzGKRByxNjsvvWkhw6j.sx.qxQrE/j0MaCWYsPq5UoT5GnjjaNe"], ["created_at", "2018-11-19 19:44:31.686925"], ["updated_at", "2018-11-19 19:44:31.686925"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1448ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:44:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (66.8ms)
+Completed 200 OK in 250ms (Views: 186.7ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/users" for 172.17.0.1 at 2018-11-19 19:44:51 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 163ms (Views: 158.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1/photos/new" for 172.17.0.1 at 2018-11-19 19:44:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "photos" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-11-19 19:44:59.086263"], ["updated_at", "2018-11-19 19:44:59.086263"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  Rendered photos/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 125ms (Views: 95.1ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/users/1/photos/new" for 172.17.0.1 at 2018-11-19 19:45:13 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.7ms)[0m  INSERT INTO "photos" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-11-19 19:45:13.588297"], ["updated_at", "2018-11-19 19:45:13.588297"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  Rendered photos/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 126ms (Views: 105.5ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:49:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 107ms (Views: 99.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:51:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.9ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:10: syntax error, unexpected tIDENTIFIER, expecting ')'
+...uccess', 'add_photo_btn'] style: ['']
+...                          ^~~~~):
+  app/views/users/show.html.haml:10: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.6ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:52:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 103ms (Views: 97.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:52:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 105ms (Views: 98.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:52:18 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 135ms (Views: 127.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/favicon.ico" for 172.17.0.1 at 2018-11-19 19:52:18 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:52:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 132ms (Views: 124.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:53:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 155ms (Views: 146.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:54:17 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 118ms (Views: 111.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:55:19 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 149ms (Views: 140.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:56:10 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.6ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:6: syntax error, unexpected ':', expecting ')'
+...tn', 'btn-primary', 'btn-lg'] :style => "position: absolute;...
+...                              ^):
+  app/views/users/show.html.haml:6: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:56:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 3.7ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+... 'btn-primary', 'btn-lg'] style: {"position: absolute; left:...
+...                          ^~~~~
+/app/app/views/users/show.html.haml:6: syntax error, unexpected '}', expecting =>
+...ute; left: 300px; top: 300px;"}
+...                              ^
+/app/app/views/users/show.html.haml:34: syntax error, unexpected keyword_ensure, expecting ')'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                         ^~~~~~
+/app/app/views/users/show.html.haml:34: syntax error, unexpected keyword_end, expecting ')'
+...uffer.upper if @haml_buffer;end;
+...                            ^~~
+/app/app/views/users/show.html.haml:37: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  app/views/users/show.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/users/show.html.haml:6: syntax error, unexpected '}', expecting =>
+  app/views/users/show.html.haml:34: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/users/show.html.haml:34: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/show.html.haml:37: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:56:28 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.4ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+... 'btn-primary', 'btn-lg'] style: {"position: absolute; left:...
+...                          ^~~~~
+/app/app/views/users/show.html.haml:6: syntax error, unexpected '}', expecting =>
+...ute; left: 300px; top: 300px;"}
+...                              ^
+/app/app/views/users/show.html.haml:34: syntax error, unexpected keyword_ensure, expecting ')'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                         ^~~~~~
+/app/app/views/users/show.html.haml:34: syntax error, unexpected keyword_end, expecting ')'
+...uffer.upper if @haml_buffer;end;
+...                            ^~~
+/app/app/views/users/show.html.haml:37: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  app/views/users/show.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/users/show.html.haml:6: syntax error, unexpected '}', expecting =>
+  app/views/users/show.html.haml:34: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/users/show.html.haml:34: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/show.html.haml:37: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:56:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 3.3ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+... 'btn-primary', 'btn-lg'] style: ["position: absolute; left:...
+...                          ^~~~~):
+  app/views/users/show.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:58:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 133ms (Views: 124.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:05 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 124ms (Views: 115.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:13 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 110ms (Views: 103.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/1/photos/new" for 172.17.0.1 at 2018-11-19 19:59:17 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "photos" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-11-19 19:59:17.916364"], ["updated_at", "2018-11-19 19:59:17.916364"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  Rendered photos/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 96ms (Views: 78.5ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/users/1/photos" for 172.17.0.1 at 2018-11-19 19:59:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"db4XUVgk0dqDPDL9eIOryS2R3/hD97hEtyLImQ3WRX/EwLh1C9Bz8XQUeO7e8KhqwxH+ZcpmiCO14/3M6fVyAQ==", "photo"=>{"title"=>""}, "commit"=>"Upload", "user_id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "photos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", ""], ["created_at", "2018-11-19 19:59:25.508764"], ["updated_at", "2018-11-19 19:59:25.508764"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.1ms)[0m  UPDATE "photos" SET "user_id" = ?, "updated_at" = ? WHERE "photos"."id" = ?  [["user_id", 1], ["updated_at", "2018-11-19 19:59:25.527515"], ["id", 4]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 41ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.8ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 4]]
+  Rendered users/show.html.haml within layouts/application (43.6ms)
+Completed 200 OK in 142ms (Views: 130.2ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/images/medium/missing.png" for 172.17.0.1 at 2018-11-19 19:59:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.0ms)
+
+
+Started POST "/tags" for 172.17.0.1 at 2018-11-19 19:59:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7E9UxluwjNNsWnQzAUS0lNTuVy+KtomtJdlmq8rolg5dMfviCEQu+JtyPiCnN7c3Om52sgMnuconGFP+LsuhcA==", "tag"=>{"photo_id"=>"4", "user_id"=>"1"}, "commit"=>"Tag User"}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.6ms)[0m  INSERT INTO "tags" ("user_id", "photo_id") VALUES (?, ?)  [["user_id", 1], ["photo_id", 4]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 24ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 4]]
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 126ms (Views: 111.6ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/images/medium/missing.png" for 172.17.0.1 at 2018-11-19 19:59:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.6ms)
+
+
+Started POST "/tags" for 172.17.0.1 at 2018-11-19 19:59:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8gaeMNCOh98cTM1+nQ/JFT/OSvu8RP9U55RWiDC6RzZDeDEUg3ol9Otkh207fMq20U5rZjXVzzPlVWPd1JlwSA==", "tag"=>{"photo_id"=>"4", "user_id"=>"1"}, "commit"=>"Tag User"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "tags" ("user_id", "photo_id") VALUES (?, ?)[0m  [["user_id", 1], ["photo_id", 4]]
+  [1m[35m (7.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 23ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.4ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 4]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 106ms (Views: 96.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/images/medium/missing.png" for 172.17.0.1 at 2018-11-19 19:59:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.1ms)
+
+
+Started POST "/tags" for 172.17.0.1 at 2018-11-19 19:59:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fuLh2DwFCbNIqHDkglnAr22KVuqrukA+APT1VL1F76LPnE78b/GrmL+AOvckKsMMgwp3dyIrcFkCNcABWWbY3A==", "tag"=>{"photo_id"=>"4", "user_id"=>"1"}, "commit"=>"Tag User"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "tags" ("user_id", "photo_id") VALUES (?, ?)[0m  [["user_id", 1], ["photo_id", 4]]
+  [1m[35m (4.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 20ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 4]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 107ms (Views: 97.7ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/images/medium/missing.png" for 172.17.0.1 at 2018-11-19 19:59:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.8ms)
+
+
+Started POST "/tags" for 172.17.0.1 at 2018-11-19 19:59:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1vdORdDUnoTEEWh9Tl2kLjHFZRkzHCz8r7BSvIgtEqBnieFhgyA8rzM5Im7oLqeN30VEhLqNHJutcWfpbA4l3g==", "tag"=>{"photo_id"=>"4", "user_id"=>"1"}, "commit"=>"Tag User"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.1ms)[0m  INSERT INTO "tags" ("user_id", "photo_id") VALUES (?, ?)  [["user_id", 1], ["photo_id", 4]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 23ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (4.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 4]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 136ms (Views: 123.0ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/tags" for 172.17.0.1 at 2018-11-19 19:59:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1vdORdDUnoTEEWh9Tl2kLjHFZRkzHCz8r7BSvIgtEqBnieFhgyA8rzM5Im7oLqeN30VEhLqNHJutcWfpbA4l3g==", "tag"=>{"photo_id"=>"4", "user_id"=>"1"}, "commit"=>"Tag User"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "tags" ("user_id", "photo_id") VALUES (?, ?)  [["user_id", 1], ["photo_id", 4]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 19ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 19:59:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 4]]
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 117ms (Views: 104.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/images/medium/missing.png" for 172.17.0.1 at 2018-11-19 19:59:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.7ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 20:00:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 4]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 119ms (Views: 108.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/images/medium/missing.png" for 172.17.0.1 at 2018-11-19 20:00:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.8ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 20:00:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (2.6ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 4]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (31.8ms)
+Completed 200 OK in 129ms (Views: 117.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/images/medium/missing.png" for 172.17.0.1 at 2018-11-19 20:00:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.3ms)

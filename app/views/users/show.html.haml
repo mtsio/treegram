@@ -3,13 +3,12 @@
     %h2= @user.email
     - if @user.avatar_file_name
       = image_tag @user.avatar.url(:thumb)
+    %div{:style => "margin-top:50px"}= link_to 'Socialize!', users_path,
+    class: ['social_btn', 'btn-primary', 'btn-lg']
   .col-sm-6
     = link_to 'Logout', log_out_path, class: ['btn', 'btn-danger', 'logout_btn']
   .row
     = link_to 'Add Photo', new_user_photo_path(@user), class: ['btn', 'btn-success', 'add_photo_btn']
-    .col-sm-6
-      = link_to 'Socialize!', users_path,
-      class: ['social_btn', 'btn-primary', 'btn-lg']
 %br/
 %br/
 %br/
@@ -20,7 +19,7 @@
 %br/
 %br/
 %br/
-.row
+.row{:style => "margin-top:50px"}
   - @user.photos.each  do |photo|
     .well.col-sm-4
       = photo.title
