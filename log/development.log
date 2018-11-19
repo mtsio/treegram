@@ -7366,3 +7366,198 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered users/show.html.haml within layouts/application (22.8ms)
 Completed 200 OK in 149ms (Views: 135.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 134ms (Views: 123.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 124ms (Views: 113.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 129ms (Views: 118.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.4ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 135ms (Views: 122.3ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:21 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 195ms (Views: 183.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:22 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 161ms (Views: 149.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 136ms (Views: 124.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 145ms (Views: 134.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.7ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 131ms (Views: 119.8ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:17 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.7ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 154ms (Views: 141.6ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.7ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 166ms (Views: 153.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 105ms (Views: 95.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:40 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (23.1ms)
+Completed 200 OK in 146ms (Views: 135.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (2.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 139ms (Views: 126.6ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:57:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 136ms (Views: 124.7ms | ActiveRecord: 8.7ms)

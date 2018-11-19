@@ -25,12 +25,18 @@
       = photo.title
       %br
       = image_tag photo.image.url(:medium)
+      %br
+      %br
       = form_for @tag do |f|
         = f.hidden_field :photo_id, value: photo.id
         = f.collection_select :user_id, @users, :id, :email
         = f.submit "Tag User"
+      %br
+      %strong='Tags: '
       - photo.tags.each do |tag|
-        = tag.user.email
+        %span= tag.user.email
+      %br
+      %br
       = form_for @comment do |c|
         = c.hidden_field :photo_id, value: photo.id
         = c.hidden_field :user_id, value: @user.id
