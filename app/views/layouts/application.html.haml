@@ -10,6 +10,9 @@
     = csrf_meta_tags
   %body
     .container
-      = flash[:alert]
-      = flash[:notice]
+      .div{class: [flash[:alert] && 'alert', 'alert-danger'] }
+        =flash[:alert]
+      .div{class: [flash[:notice] && 'alert', 'alert-info'] }
+        =flash[:alert]
+    .container      
       = yield

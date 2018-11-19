@@ -2,8 +2,10 @@ class PhotosController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     if params[:photo] == nil
-
       flash[:alert] = "Please upload a photo"
+      redirect_to :back
+    elsif params[:title] == "" || params[:title] == nil
+      flash[:alert] = "Please specify a title"
       redirect_to :back
     else
       @photo = Photo.create(photo_params)
