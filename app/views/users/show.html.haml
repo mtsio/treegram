@@ -37,6 +37,7 @@
         %span= tag.user.email
       %br
       %br
+      %strong='Add a comment'
       = form_for @comment do |c|
         = c.hidden_field :photo_id, value: photo.id
         = c.hidden_field :user_id, value: @user.id
