@@ -28,6 +28,17 @@ class UsersController < ApplicationController
   def show
     @users = User.all
     @user = User.find(params[:id])
+    @followingUsers = @user.relations.all
+
+    @photosRes = Array.new
+    @photosRes << @user.photos
+          .flat_map {|p| {:email => @user.email, :photo => p}}
+    @photosRes << @followingUsers
+          .map{ |u| User.find(u.following)}
+          .flat_map{ |u| u.photos.map{|p| {:email => u.email, :photo => p}}}
+    @photosRes = @photosRes.flatten.sort {|a,b| b[:photo].created_at <=> a[:photo].created_at}
+
+    logger.debug "parmas hash: #{@followingUsers.count}"
     @tag = Tag.new
     @comment = Comment.new
   end

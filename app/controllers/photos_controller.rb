@@ -2,7 +2,6 @@ class PhotosController < ApplicationController
   def create
     @user = User.find(params[:user_id])
 
-    logger.debug "parmas hash: #{params}"
     if params[:photo][:image] == nil
       flash[:alert] = "Please upload a photo"
       redirect_to :back
@@ -13,6 +12,8 @@ class PhotosController < ApplicationController
       @photo = Photo.create(photo_params)
       @photo.user_id = @user.id
       @photo.save
+      logger.info "Create #{@user}"
+
       flash[:notice] = "Successfully uploaded a photo"
       redirect_to user_path(@user)
     end
@@ -20,6 +21,7 @@ class PhotosController < ApplicationController
 
   def new
     @user = User.find(params[:user_id])
+    logger.info "NEW #{@user}"
     @photo = Photo.create()
   end
   
