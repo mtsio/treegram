@@ -29,6 +29,7 @@ class UsersController < ApplicationController
     @users = User.all
     @user = User.find(params[:id])
     @tag = Tag.new
+    @comment = Comment.new
   end
 
   private
