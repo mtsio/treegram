@@ -2,15 +2,14 @@
 %br
 - current_user = session[:user_id]
 - @users.each do |user|
-  -unless user.id == current_user
-    .row
-      .well.col-sm-4
-        = user.email
-        =link_to 'Follow', new_user_relation_path(user.id),
-        class: ['btn', 'btn-sm', 'btn-primary']
-        .col
-          - if user.avatar_file_name
-            = image_tag user.avatar.url(:thumb)
+  .row
+    .well.col-sm-4
+      = user.email
+      .col
+        - if user.avatar_file_name
+          = image_tag user.avatar.url(:thumb)
+      -unless user.id == current_user
+        =link_to 'Follow', new_user_relation_path(user.id), class: ['btn', 'btn-sm', 'btn-primary', 'pull-right']
  
 
 
