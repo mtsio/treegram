@@ -9,12 +9,13 @@ class RelationsController < ApplicationController
 
   def create
     @follower = User.find(session[:user_id])
-    @following = params[:user_id]
+    @followingID = params[:user_id]
     @relation = @follower.relations.create
     @relation.follower = @follower.id
-    @relation.following = @following
+    @relation.following = @followingID
+    @followingUser = User.find(@followingID)
     if @relation.save
-      flash[:notice]= "You start following #{@following.email}"
+      flash[:notice]= "You start following #{@followingUser.email}"
       redirect_to users_path
     end
   end
