@@ -7574,3 +7574,46 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered users/show.html.haml within layouts/application (22.1ms)
 Completed 200 OK in 142ms (Views: 129.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/log-out" for 172.17.0.1 at 2018-11-19 23:01:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2018-11-19 23:01:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 83ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log-in" for 172.17.0.1 at 2018-11-19 23:01:47 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 92ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/log-in" for 172.17.0.1 at 2018-11-19 23:01:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wF4YKUxAEt1IhIEpdBjqFzFHQBKwY8jJF/ck3KGbt0RxILcNH7Sw9r+syzrSa+m038dhjzny+K4VNhGJRbiAOg==", "email"=>"fang@inaccess.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "fang@inaccess.com"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 63ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 23:01:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (2.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 141ms (Views: 128.6ms | ActiveRecord: 9.4ms)
