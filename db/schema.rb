@@ -17,12 +17,10 @@ ActiveRecord::Schema.define(version: 20181119221458) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "content"
-    t.integer  "comment_id"
     t.integer  "photo_id"
     t.integer  "user_id"
   end
 
-  add_index "comments", ["comment_id"], name: "index_comments_on_comment_id"
   add_index "comments", ["photo_id"], name: "index_comments_on_photo_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
@@ -39,8 +37,8 @@ ActiveRecord::Schema.define(version: 20181119221458) do
   end
 
   create_table "relations", force: :cascade do |t|
-    t.integer  "following"
-    t.integer  "follower"
+    t.string   "follower"
+    t.string   "following"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

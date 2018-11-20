@@ -14,6 +14,7 @@ class RelationsController < ApplicationController
     @relation.follower = @follower.id
     @relation.following = @following
     if @relation.save
+      flash[:notice]= "You start following #{@follower.email}"
       redirect_to users_path
     end
   end
