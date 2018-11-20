@@ -1,6 +1,12 @@
+<<<<<<< master
   [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (2.5ms)[0m  [1m            SELECT sql
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.0ms)[0m  [1m            SELECT sql
+>>>>>>> Add comment controller, and model
             FROM sqlite_master
             WHERE name='index_relations_on_user_id' AND type='index'
             UNION ALL
@@ -8,6 +14,7 @@
             FROM sqlite_temp_master
             WHERE name='index_relations_on_user_id' AND type='index'
 [0m
+<<<<<<< master
 
 
 Started GET "/" for 172.17.0.1 at 2018-11-19 19:43:44 +0000
@@ -5576,3 +5583,2037 @@ ActionController::RoutingError (No route matches [GET] "/images/medium/missing.p
   Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
   Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.7ms)
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20181119213926)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (13.1ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119213926"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+<<<<<<< master
+>>>>>>> Add comment controller, and model
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateComments (20181119213926)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (9.0ms)[0m  DROP TABLE "comments"
+  [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20181119213926"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20181119213926)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (10.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119213926"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddFieldnameToTablename (20181119215000)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.4ms)[0m  [1mALTER TABLE "tablenames" ADD "fieldname" varchar[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldnameToTablename (20181119215000)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.7ms)[0m  [1mALTER TABLE "tablenames" ADD "fieldname" varchar[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldnameToTablename (20181119215000)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.6ms)[0m  [1mALTER TABLE "tablenames" ADD "fieldname" varchar[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldnameToTablename (20181119215000)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "tablenames" ADD "fieldname" varchar[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldnameToTablename (20181119215000)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.3ms)[0m  [1mALTER TABLE "tablenames" ADD "fieldname" varchar[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateComments (20181119213926)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (8.6ms)[0m  DROP TABLE "comments"
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20181119213926"]]
+  [1m[35m (5.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateRelations (20181116213707)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (14.0ms)[0m  DROP TABLE "relations"
+  [1m[36mSQL (3.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20181116213707"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRelations (20181116213707)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.2ms)[0m  [1mCREATE TABLE "relations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "follower" varchar, "following" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_relations_on_user_id" ON "relations" ("user_id")[0m
+  [1m[35mSQL (7.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181116213707"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20181119213926)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119213926"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddFieldnameToTablename (20181119215000)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "tablenames" ADD "fieldname" varchar[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateComments (20181119213926)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (9.7ms)[0m  DROP TABLE "comments"
+  [1m[36mSQL (2.9ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20181119213926"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20181119215801)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (9.8ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119215801"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldsToComments (20181119220044)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (6.1ms)[0m  [1mALTER TABLE "comments" ADD "content" varchar[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119220044"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+>>>>>>> Add comments controller model database
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_usercomment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_usercomment_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddCommentRefToUser (20181119220831)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_hash" varchar, "password_salt" varchar, "created_at" datetime, "updated_at" datetime, "avatar_file_name" varchar, "avatar_content_type" varchar, "avatar_file_size" integer, "avatar_updated_at" datetime, "usercomment_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_usercomment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_usercomment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_ausers_on_usercomment_id" ON "ausers" ("usercomment_id")[0m
+  [1m[35m (1.3ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "ausers" ("id","email","password_hash","password_salt","created_at","updated_at","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at","usercomment_id") VALUES (1, 'fang@inaccess.com', '$2a$10$44FxuDlJsrnRubZIDi7Dd.7BJbIj7VKYijp3MaTp2EsZ8zORtLNgy', '$2a$10$44FxuDlJsrnRubZIDi7Dd.', '2018-11-19 21:18:39.938701', '2018-11-19 21:18:39.938701', 'Alpn.jpg', 'image/jpeg', 68690, '2018-11-19 21:18:39.672755', NULL)[0m
+  [1m[35m (8.8ms)[0m  DROP TABLE "users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_hash" varchar, "password_salt" varchar, "created_at" datetime, "updated_at" datetime, "avatar_file_name" varchar, "avatar_content_type" varchar, "avatar_file_size" integer, "avatar_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_usercomment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_usercomment_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("id","email","password_hash","password_salt","created_at","updated_at","avatar_file_name","avatar_content_type","avatar_file_size","avatar_updated_at") VALUES (1, 'fang@inaccess.com', '$2a$10$44FxuDlJsrnRubZIDi7Dd.7BJbIj7VKYijp3MaTp2EsZ8zORtLNgy', '$2a$10$44FxuDlJsrnRubZIDi7Dd.', '2018-11-19 21:18:39.938701', '2018-11-19 21:18:39.938701', 'Alpn.jpg', 'image/jpeg', 68690, '2018-11-19 21:18:39.672755')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (2.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20181119220831"]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_photos_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_photos_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddCommentRefToPhoto (20181119220814)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TEMPORARY TABLE "aphotos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "caption" varchar, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "title" varchar, "comment_id" integer) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_photos_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_photos_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_aphotos_on_comment_id" ON "aphotos" ("comment_id")[0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "photos"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aphotos" ("id","user_id","caption","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","title","comment_id") VALUES (1, NULL, NULL, '2018-11-19 21:18:42.834715', '2018-11-19 21:18:42.834715', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aphotos" ("id","user_id","caption","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","title","comment_id") VALUES (2, 1, NULL, '2018-11-19 21:18:47.986079', '2018-11-19 21:18:48.077888', 'Alpn.jpg', 'image/jpeg', 68690, '2018-11-19 21:18:47.821419', 'ffff', NULL)
+  [1m[36m (9.6ms)[0m  [1mDROP TABLE "photos"[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "caption" varchar, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "title" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aphotos_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aphotos_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "aphotos"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "photos" ("id","user_id","caption","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","title") VALUES (1, NULL, NULL, '2018-11-19 21:18:42.834715', '2018-11-19 21:18:42.834715', NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "photos" ("id","user_id","caption","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","title") VALUES (2, 1, NULL, '2018-11-19 21:18:47.986079', '2018-11-19 21:18:48.077888', 'Alpn.jpg', 'image/jpeg', 68690, '2018-11-19 21:18:47.821419', 'ffff')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aphotos"[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20181119220814"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserRefToComment (20181119221041)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.2ms)[0m  [1mALTER TABLE "comments" ADD "comment_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (3.0ms)[0m  [1mCREATE  INDEX "index_comments_on_comment_id" ON "comments" ("comment_id")[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119221041"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddPhotoRefToComment (20181119221056)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "comments" ADD "comment_id" integer[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhotoRefToComment (20181119221056)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "comments" ADD "comment_id" integer[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddUserRefToComment (20181119221041)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "acomments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "content" varchar, "comment_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_acomments_on_comment_id" ON "acomments" ("comment_id")[0m
+  [1m[35m (0.4ms)[0m  SELECT * FROM "comments"
+  [1m[36m (10.1ms)[0m  [1mDROP TABLE "comments"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "content" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_acomments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_acomments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acomments"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "acomments"[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20181119221041"]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddFieldsToComments (20181119220044)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "acomments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "content" varchar) 
+  [1m[36m (0.4ms)[0m  [1mSELECT * FROM "comments"[0m
+  [1m[35m (8.3ms)[0m  DROP TABLE "comments"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "acomments"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acomments"[0m
+  [1m[35mSQL (3.8ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20181119220044"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldsToComments (20181119220044)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.8ms)[0m  [1mALTER TABLE "comments" ADD "content" varchar[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119220044"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserRefToComment (20181119221041)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (7.8ms)[0m  [1mALTER TABLE "comments" ADD "comment_id" integer[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.6ms)[0m  [1mCREATE  INDEX "index_comments_on_comment_id" ON "comments" ("comment_id")[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119221041"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddPhotoRefToComment (20181119221056)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "comments" ADD "comment_id" integer[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhotoRefToComment (20181119221244)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "comments" ADD "comment_id" integer[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhotoRefToComment (20181119221400)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (7.2ms)[0m  [1mALTER TABLE "comments" ADD "photocomment_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (2.0ms)[0m  CREATE  INDEX "index_comments_on_photocomment_id" ON "comments" ("photocomment_id")
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181119221400"]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_photocomment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_photocomment_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddPhotoRefToComment (20181119221400)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  CREATE TEMPORARY TABLE "acomments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "content" varchar, "comment_id" integer, "photocomment_id" integer) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_photocomment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_photocomment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "tindex_acomments_on_photocomment_id" ON "acomments" ("photocomment_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_acomments_on_comment_id" ON "acomments" ("comment_id")[0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "comments"
+  [1m[36m (7.5ms)[0m  [1mDROP TABLE "comments"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "content" varchar, "comment_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_acomments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_acomments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_acomments_on_photocomment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_acomments_on_photocomment_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_comments_on_comment_id" ON "comments" ("comment_id")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "acomments"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acomments"[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20181119221400"]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhotoRefToComment (20181119221435)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (6.5ms)[0m  [1mALTER TABLE "comments" ADD "photo_id" integer[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX "index_comments_on_photo_id" ON "comments" ("photo_id")
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181119221435"]]
+  [1m[35m (10.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserRefToComment (20181119221458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (6.3ms)[0m  [1mALTER TABLE "comments" ADD "user_id" integer[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181119221458"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:22:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (5.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (3.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (161.2ms)
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 20.9ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |f|
+    36:         = f.hidden_field :photo_id, value: photo.id
+    37:         = f.hidden_field :user_id, value: user.id
+    38:         = f.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml__831351096910141797_70342202736840'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_70342202736840'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:24:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (79.9ms)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 24.0ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afbef6bb8>:0x0000559afbeb7878>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |f|
+    36:         = f.hidden_field :photo_id, value: photo.id
+    37:         = f.hidden_field :user_id, value: user.id
+    38:         = f.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml__831351096910141797_70342202736840'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_70342202736840'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:24:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (52.6ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 8.2ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afbef6bb8>:0x0000559af9fd8628>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |f|
+    36:         = f.hidden_field :photo_id, value: photo.id
+    37:         = f.hidden_field :user_id, value: user.id
+    38:         = f.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml__831351096910141797_47062053724120'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_47062053724120'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:25:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (54.1ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 7.1ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afbef6bb8>:0x0000559afac208b8>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:       = form_for @comment do |f|
+    37:         = f.hidden_field :photo_id, value: photo.id
+    38:         = f.hidden_field :user_id, value: user.id
+    39:         = f.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_47062060163600'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_47062060163600'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:26:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (78.4ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 22.8ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afbe86cf0>:0x0000559afbe48a40>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:       = form_for @comment do |f|
+    37:         = f.hidden_field :photo_id, value: photo.id
+    38:         = f.hidden_field :user_id, value: user.id
+    39:         = f.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_47062060163600'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_47062060163600'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:28:20 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (80.6ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 19.7ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afba52918>:0x0000559afba4d8a0>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:       = form_for @comment do |f|
+    37:         = f.hidden_field :photo_id, value: photo.id
+    38:         = f.hidden_field :user_id, value: user.id
+    39:         = f.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_47062060163600'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_47062060163600'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:29:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (64.3ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 8.2ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afba52918>:0x0000559afbb9c850>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:       = form_for @comment do |c|
+    37:         = f.hidden_field :photo_id, value: photo.id
+    38:         = f.hidden_field :user_id, value: user.id
+    39:         = f.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_47062068270000'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_47062068270000'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:29:43 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.7ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (55.1ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 7.5ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afba52918>:0x0000559afbd4da50>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:       = form_for @comment do |c|
+    37:         = c.hidden_field :photo_id, value: photo.id
+    38:         = c.hidden_field :user_id, value: user.id
+    39:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_47062069146800'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_47062069146800'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:30:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.8ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 1630ms (Views: 1620.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:30:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (5.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (52.3ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 11.8ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559afba52918>:0x00007ff39803d458>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:       = form_for @comment do |c|
+    37: 
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_70342102081700'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_70342102081700'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:31:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (86.8ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 18.7ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x00007ff39caa4708>:0x00007ff398f65070>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:       = form_for @comment do |c|
+    37:         = c.hidden_field :photo_id, value: photo.id
+    38:         = c.hidden_field :user_id, value: user.id
+    39:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_70342141074660'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_70342141074660'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:32:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (66.8ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 7.6ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x00007ff39caa4708>:0x00007ff39ca49ee8>
+Did you mean?  font_path):
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       %br
+    36:         = form_for @comment do |c|
+    37:           = c.hidden_field :photo_id, value: photo.id
+    38:           = c.hidden_field :user_id, value: user.id
+    39:           = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:36:in `block in _app_views_users_show_html_haml__831351096910141797_70342139745820'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_70342139745820'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:32:51 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (4.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/show.html.haml within layouts/application (48.7ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 7.2ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x00007ff39caa4708>:0x00007ff39e0a58b8>
+Did you mean?  font_path):
+    28:       = image_tag photo.image.url(:medium)
+    29: 
+    30:       %br
+    31:       = form_for @comment do |c|
+    32:         = c.hidden_field :photo_id, value: photo.id
+    33:         = c.hidden_field :user_id, value: user.id
+    34:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:31:in `block in _app_views_users_show_html_haml__831351096910141797_70342152626900'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_70342152626900'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:33:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (48.1ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 6.9ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x00007ff39caa4708>:0x00007ff39803d110>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment'
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml__831351096910141797_70342102081100'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml__831351096910141797_70342102081100'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_photo_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_relations_on_user_id' AND type='index'
+
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:34:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (4.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.9ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (158.4ms)
+Completed 500 Internal Server Error in 412ms (ActiveRecord: 31.9ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559d4ce6bd30>:0x0000559d507da7d8>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067074255540'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067074255540'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:36:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (80.2ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 25.4ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559d502f3698>:0x0000559d502e6da8>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067074255540'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067074255540'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:36:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (78.8ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 22.7ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559d4fdbb0e0>:0x0000559d4fdb2698>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067074255540'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067074255540'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:37:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (85.4ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 23.4ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559d4e267118>:0x0000559d4e10eeb0>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067074255540'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067074255540'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:37:32 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (2.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (55.6ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 9.3ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559d4e267118>:0x0000559d4ddeaec8>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067074255540'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067074255540'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:38:52 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 10.2ms)
+
+NameError (uninitialized constant UsersController::Comments):
+  app/controllers/users_controller.rb:32:in `show'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:39:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (79.0ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 20.9ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559d4f5a2480>:0x0000559d4f3ae368>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067074255540'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067074255540'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:39:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (4.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (48.1ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 9.7ms)
+
+ActionView::Template::Error (undefined method `form' for #<#<Class:0x0000559d4f5a2480>:0x0000559d4ec4e9b0>
+Did you mean?  fork):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067059800140'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067059800140'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:40:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (51.6ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 7.3ms)
+
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x0000559d4f5a2480>:0x0000559d4f44f9e8>
+Did you mean?  font_path):
+    32:         = f.submit "Tag User"
+    33:       - photo.tags.each do |tag|
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.text_area :content
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067064020840'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067064020840'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+
+
+Started GET "/comments/" for 172.17.0.1 at 2018-11-19 22:41:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.1ms)
+
+
+Started GET "/comments/" for 172.17.0.1 at 2018-11-19 22:42:32 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/comments/" for 172.17.0.1 at 2018-11-19 22:44:21 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.3ms)
+
+
+Started GET "/comments/" for 172.17.0.1 at 2018-11-19 22:45:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+  web-console (3.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.5ms)
+
+
+Started GET "/users/1/" for 172.17.0.1 at 2018-11-19 22:45:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (0.9ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (2.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (80.7ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 17.6ms)
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x0000559d50578d00>:0x0000559d5056c3e8>
+Did you mean?  @user
+               @users):
+    34:         = tag.user.email
+    35:       = form_for @comment do |c|
+    36:         = c.hidden_field :photo_id, value: photo.id
+    37:         = c.hidden_field :user_id, value: user.id
+    38:         = c.text_area :content
+    39:         = c.submit 'Comment', :class => "btn btn-success pull-right"
+  app/views/users/show.html.haml:37:in `block (2 levels) in _app_views_users_show_html_haml___3782208478763819966_47067064020840'
+  app/views/users/show.html.haml:35:in `block in _app_views_users_show_html_haml___3782208478763819966_47067064020840'
+  app/views/users/show.html.haml:24:in `_app_views_users_show_html_haml___3782208478763819966_47067064020840'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.7ms)
+
+
+Started GET "/users/1/" for 172.17.0.1 at 2018-11-19 22:46:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 2.0ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:37: syntax error, unexpected ':', expecting ')'
+...field :user_id, value: @users :id
+...                              ^):
+  app/views/users/show.html.haml:37: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
+
+
+Started GET "/users/1/" for 172.17.0.1 at 2018-11-19 22:46:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 2.8ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:37: syntax error, unexpected ':', expecting ')'
+...hidden_field :user_id, @users :id
+...                              ^):
+  app/views/users/show.html.haml:37: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.8ms)
+
+
+Started GET "/users/1/" for 172.17.0.1 at 2018-11-19 22:47:10 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.3ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:37: syntax error, unexpected ':', expecting ')'
+....hidden_field :user_id, @user :id
+...                              ^):
+  app/views/users/show.html.haml:37: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.7ms)
+
+
+Started GET "/users/1/" for 172.17.0.1 at 2018-11-19 22:47:43 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 519ms (Views: 508.5ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/comments" for 172.17.0.1 at 2018-11-19 22:47:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RzQS1uxsjkwZLBipfTuuErjXHhVxvc4d5xW7vzvGU6/2Sr3yv5gsZ+4EUrrbSK2xVlc/iPgs/nrl1I7q3+Vk0Q==", "comment"=>{"photo_id"=>"2", "user_id"=>"1", "content"=>"nikos"}, "commit"=>"Comment"}
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.1ms)[0m  [1mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.1ms)[0m  [1mINSERT INTO "comments" ("user_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["photo_id", 2], ["created_at", "2018-11-19 22:47:48.246551"], ["updated_at", "2018-11-19 22:47:48.246551"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 28ms (ActiveRecord: 18.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:47:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  Rendered users/show.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 111ms (Views: 102.0ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/tags" for 172.17.0.1 at 2018-11-19 22:48:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wSsb9wra604bU8WtB25Fi0Y3LgNgZazBgINEzvJXuodwVbTTWS5JZex7j76hHUYoqLcPnun0nKaCQnGbFnSN+Q==", "tag"=>{"photo_id"=>"2", "user_id"=>"1"}, "commit"=>"Tag User"}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (8.2ms)[0m  [1mINSERT INTO "tags" ("user_id", "photo_id") VALUES (?, ?)[0m  [["user_id", 1], ["photo_id", 2]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 24ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:48:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (3.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (27.2ms)
+Completed 200 OK in 250ms (Views: 234.4ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/comments" for 172.17.0.1 at 2018-11-19 22:48:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qrziO3t20qPY26Uf0onhx3iF/LN0NI2W8tXMaL2aS5Qbwk0fKIJwiC/z7wx0+uJklgXdLv2lvfHwFPk9Wbl86g==", "comment"=>{"photo_id"=>"2", "user_id"=>"1", "content"=>"fdfgdg"}, "commit"=>"Comment"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.7ms)[0m  [1mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.2ms)[0m  [1mINSERT INTO "comments" ("user_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["photo_id", 2], ["created_at", "2018-11-19 22:48:04.699210"], ["updated_at", "2018-11-19 22:48:04.699210"]]
+  [1m[35m (7.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 29ms (ActiveRecord: 21.7ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:48:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.6ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (16.0ms)
+Completed 200 OK in 122ms (Views: 112.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:51:51 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (3.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (76.7ms)
+Completed 200 OK in 275ms (Views: 187.7ms | ActiveRecord: 25.9ms)
+
+
+Started POST "/comments" for 172.17.0.1 at 2018-11-19 22:51:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4geABYfrJuJ9xhcXl9yBk0IekGJCZQQm0pKmoG5u4Q1TeS8h1B+EyYruXQQxr4IwrJ6x/8v0NEHQU5P1ik3Wcw==", "comment"=>{"photo_id"=>"2", "user_id"=>"1", "content"=>"nikos"}, "commit"=>"Comment"}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.3ms)[0m  SELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.8ms)[0m  INSERT INTO "comments" ("user_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["photo_id", 2], ["created_at", "2018-11-19 22:51:54.959648"], ["updated_at", "2018-11-19 22:51:54.959648"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 30ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:51:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 119ms (Views: 107.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:53:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 2.8ms)
+
+SyntaxError (/app/app/views/users/show.html.haml:38: syntax error, unexpected ':', expecting ')'
+...scape((( c.text_area :content :class => "form-control pull-r...
+...                              ^):
+  app/views/users/show.html.haml:38: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.6ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:53:32 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (22.0ms)
+Completed 200 OK in 157ms (Views: 144.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:53:43 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.9ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (22.7ms)
+Completed 200 OK in 146ms (Views: 134.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:53:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 138ms (Views: 125.7ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:53:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (3.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.6ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.8ms)
+Completed 200 OK in 135ms (Views: 121.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:54:00 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 131ms (Views: 120.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:54:10 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (2.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (22.8ms)
+Completed 200 OK in 149ms (Views: 135.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 134ms (Views: 123.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 124ms (Views: 113.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 129ms (Views: 118.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.4ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 135ms (Views: 122.3ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:21 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 195ms (Views: 183.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:22 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 161ms (Views: 149.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 136ms (Views: 124.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.5ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 145ms (Views: 134.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:55:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.7ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 131ms (Views: 119.8ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:17 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.7ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 154ms (Views: 141.6ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (3.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.7ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 166ms (Views: 153.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:25 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 105ms (Views: 95.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:40 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (2.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (23.1ms)
+Completed 200 OK in 146ms (Views: 135.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:56:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (2.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 139ms (Views: 126.6ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:57:02 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?[0m  [["photo_id", 2]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 136ms (Views: 124.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 22:57:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (2.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (1.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (22.1ms)
+Completed 200 OK in 142ms (Views: 129.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/log-out" for 172.17.0.1 at 2018-11-19 23:01:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2018-11-19 23:01:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 83ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log-in" for 172.17.0.1 at 2018-11-19 23:01:47 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 92ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/log-in" for 172.17.0.1 at 2018-11-19 23:01:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wF4YKUxAEt1IhIEpdBjqFzFHQBKwY8jJF/ck3KGbt0RxILcNH7Sw9r+syzrSa+m038dhjzny+K4VNhGJRbiAOg==", "email"=>"fang@inaccess.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "fang@inaccess.com"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 63ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2018-11-19 23:01:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPhoto Load (1.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (2.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."photo_id" = ?  [["photo_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 141ms (Views: 128.6ms | ActiveRecord: 9.4ms)

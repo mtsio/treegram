@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181119202834) do
+ActiveRecord::Schema.define(version: 20181119221458) do
+
+  create_table "comments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "content"
+    t.integer  "photo_id"
+    t.integer  "user_id"
+  end
+
+  add_index "comments", ["photo_id"], name: "index_comments_on_photo_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "photos", force: :cascade do |t|
     t.integer  "user_id"
@@ -26,8 +37,8 @@ ActiveRecord::Schema.define(version: 20181119202834) do
   end
 
   create_table "relations", force: :cascade do |t|
-    t.integer  "following"
-    t.integer  "follower"
+    t.string   "follower"
+    t.string   "following"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
