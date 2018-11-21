@@ -22,6 +22,7 @@
 .row{:style => "margin-top:50px"}
   - @photosRes.each  do |p|
     .well.col-sm-4
+      =link_to "<i class=\"glyphicon glyphicon-trash\"></i>".html_safe, user_photo_path(@user,p[:photo]), :method => 'delete', class: ["btn", "btn-danger", "btn-xs","pull-right"], data: { confirm: 'Are you sure?' }
       %strong= p[:photo].title
       = @user.email != p[:email] && "from user #{p[:email]}" || ""
       %br
@@ -41,7 +42,7 @@
       %br
       - p[:photo].comments.each do |c|
         ="#{c.user.email} Replied: "
-        =c.content
+        %quote=c.content
         %br
       %br
       %br

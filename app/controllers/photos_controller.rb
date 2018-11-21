@@ -19,6 +19,21 @@ class PhotosController < ApplicationController
     end
   end
 
+  def destroy
+    @photo = Photo.find(params[:id])
+    @photo.comments.each{
+      |c| c.destroy
+    }
+    @photo.tags.each{
+      |c| c.destroy
+    }
+    @photo.image.destroy
+    @photo.destroy
+
+    flash[:notice] = "Successfully deleted photo: #{@photo.title}"
+    redirect_to user_path(params[:user_id])
+  end
+
   def new
     @user = User.find(params[:user_id])
     logger.info "NEW #{@user}"
