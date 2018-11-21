@@ -37,6 +37,15 @@
       - p[:photo].tags.each do |tag|
         %span= tag.user.email
       %br
+      %strong='Comments: '
+      %br
+      - p[:photo].comments.each do |c|
+        ="#{c.user.email} Replied: "
+        =c.content
+        %br
+      %br
+      %br
+      %br
       %br
       %strong='Add a comment'
       = form_for @comment do |c|
