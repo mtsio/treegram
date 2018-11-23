@@ -21,16 +21,15 @@ class PhotosController < ApplicationController
 
   def destroy
     @photo = Photo.find(params[:id])
-    @photo.comments.each{
-      |c| c.destroy
-    }
-    @photo.tags.each{
-      |c| c.destroy
-    }
-    @photo.image.destroy
-    @photo.destroy
+    @user = User.find(params[:user_id])
 
-    flash[:notice] = "Successfully deleted photo: #{@photo.title}"
+    # check if the user trying to delete the photo is the one who uploaded it.
+    if @photo.user_id == @user.id
+      @photo.destroy
+      flash[:notice] = "Successfully deleted photo: #{@photo.title}"
+    elsif
+      flash[:alert] = "You are prevented from deleting photos from other users."
+    end
     redirect_to user_path(params[:user_id])
   end
 
