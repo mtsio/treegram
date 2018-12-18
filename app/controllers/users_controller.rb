@@ -36,7 +36,9 @@ class UsersController < ApplicationController
     @photosRes << @followingUsers
           .map{ |u| User.find(u.following)}
           .flat_map{ |u| u.photos.map{|p| {:email => u.email, :photo => p}}}
-    @photosRes = @photosRes.flatten.sort {|a,b| b[:photo].created_at <=> a[:photo].created_at}
+    @photosRes = @photosRes.flatten.sort {|a,b| b[:photo].created_at \
+                                          <=> a[:photo].created_at}
+                   .group_by{ |a| a[:photo].user_id }
 
     logger.debug "parmas hash: #{@followingUsers.count}"
     @tag = Tag.new
@@ -46,7 +48,8 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :avatar)
+      params.require(:user).permit(:email, :password, :password_confirmation,
+                                   :avatar)
   end
 
 
