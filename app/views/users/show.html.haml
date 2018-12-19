@@ -19,42 +19,41 @@
 %br/
 %br/
 %br/
+
 .row{:style => "margin-top:50px"}
-  - @photosRes.each  do |g|
-    -g[1].each do |p|
-      .well.col-sm-4
-        =link_to "<i class=\"glyphicon glyphicon-trash\"></i>".html_safe, user_photo_path(@user,p[:photo]), :method => 'delete', class: ["btn", "btn-danger", "btn-xs","pull-right"], data: { confirm: 'Are you sure?' }
-        %strong= p[:photo].title
-        = @user.email != p[:email] && "from user #{p[:email]}" || ""
+  - @photosRes.each do |group|
+    - p = group[1].first 
+    .well.col-sm-4
+      =link_to "<i class=\"glyphicon glyphicon-trash\"></i>".html_safe, user_photo_path(@user,p[:photo]), :method => 'delete', class: ["btn", "btn-danger", "btn-xs","pull-right"], data: { confirm: 'Are you sure?' }
+      %strong= p[:photo].title
+      = @user.email != p[:email] && "from user #{p[:email]}" || ""
+      %br
+      = image_tag p[:photo].image.url(:medium)
+      %br
+      %br
+      = form_for @tag do |f|
+        = f.hidden_field :photo_id, value: p[:photo].id
+        = f.collection_select :user_id, @users, :id, :email
+        = f.submit "Tag User"
+      %br
+      %strong='Tags: '
+      - p[:photo].tags.each do |tag|
+        %span= tag.user.email
+      %br
+      %strong='Comments: '
+      %br
+      - p[:photo].comments.each do |c|
+        ="#{c.user.email} Replied: "
+        %quote=c.content
         %br
-        = image_tag p[:photo].image.url(:medium)
+      %br
+      %br
+      %br
+      %br
+      %strong='Add a comment'
+      = form_for @comment do |c|
+        = c.hidden_field :photo_id, value: p[:photo].id
+        = c.hidden_field :user_id, value: @user.id
+        = c.text_area :content, :class => "form control"
         %br
-        %br
-        = form_for @tag do |f|
-          = f.hidden_field :photo_id, value: p[:photo].id
-          = f.collection_select :user_id, @users, :id, :email
-          = f.submit "Tag User"
-        %br
-        %strong='Tags: '
-        - p[:photo].tags.each do |tag|
-          %span= tag.user.email
-        %br
-        %strong='Comments: '
-        %br
-        - p[:photo].comments.each do |c|
-          ="#{c.user.email} Replied: "
-          %quote=c.content
-          %br
-        %br
-        %br
-        %br
-        %br
-        %strong='Add a comment'
-        = form_for @comment do |c|
-          = c.hidden_field :photo_id, value: p[:photo].id
-          = c.hidden_field :user_id, value: @user.id
-          = c.text_area :content, :class => "form control"
-          %br
-          = c.submit 'Comment', :class => "btn btn-success pull-right"
-
-
+        = c.submit 'Comment', :class => "btn btn-success pull-right"
