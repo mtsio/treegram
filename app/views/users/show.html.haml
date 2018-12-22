@@ -9,13 +9,13 @@
     = link_to 'Logout', log_out_path, class: ['btn', 'btn-danger', 'logout_btn']
   .div
     = link_to 'Add Photo', new_user_photo_path(@user), class: ['btn', 'btn-success', 'add_photo_btn']
-  .col-sm-6.user_att.my_photo
-    - @photosRes.each do |group|
-      - p = group[1].first 
-      -if p[:photo].user_id == @user.id
-        %h3="My Photos"
-        = image_tag p[:photo].image.url(:thumb)
-
+  %div{:id => "myphoto"}
+    .col-sm-6.user_att.my_photo
+      - @photosRes.each do |group|
+        - p = group[1].first 
+        -if p[:photo].user_id == @user.id
+          %h3='My Photos'
+          = image_tag p[:photo].image.url(:thumb)
 %br/
 %br/
 %br/
@@ -27,41 +27,42 @@
 %br/
 %br/
 
-.row{:style => "margin-top:50px"}
-  - @photosRes.each do |group|
-    - p = group[1].first
-    -if p[:photo].user_id != @user.id
-      .well.col-sm-4
-        =link_to "<i class=\"glyphicon glyphicon-trash\"></i>".html_safe, user_photo_path(@user,p[:photo]), :method => 'delete', class: ["btn", "btn-danger", "btn-xs","pull-right"], data: { confirm: 'Are you sure?' }
-        %strong= p[:photo].title
-        = @user.email != p[:email] && "from user #{p[:email]}" || ""
-        %br
-        = image_tag p[:photo].image.url(:medium)
-        %br
-        %br
-  -# = form_for @tag do |f|
-  -#   = f.hidden_field :photo_id, value: p[:photo].id
-  -#   = f.collection_select :user_id, @users, :id, :email
-  -#   = f.submit "Tag User"
-  -# %br
-  -# %strong='Tags: '
-  -# - p[:photo].tags.each do |tag|
-  -#   %span= tag.user.email
-  -# %br
-  -# %strong='Comments: '
-  -# %br
-  -# - p[:photo].comments.each do |c|
-  -#   ="#{c.user.email} Replied: "
-  -#   %quote=c.content
-  -#   %br
-  -# %br
-  -# %br
-  -# %br
-  -# %br
-  -# %strong='Add a comment'
-  -# = form_for @comment do |c|
-  -#   = c.hidden_field :photo_id, value: p[:photo].id
-  -#   = c.hidden_field :user_id, value: @user.id
-  -#   = c.text_area :content, :class => "form control"
-  -#   %br
-  -#   = c.submit 'Comment', :class => "btn btn-success pull-right"
+= render 'photos/show'
+
+-# = form_for @tag do |f|
+-#   = f.hidden_field :photo_id, value: p[:photo].id
+-#   = f.collection_select :user_id, @users, :id, :email
+-#   = f.submit "Tag User"
+-# %br
+-# %strong='Tags: '
+-# - p[:photo].tags.each do |tag|
+-#   %span= tag.user.email
+-# %br
+-# %strong='Comments: '
+-# %br
+-# - p[:photo].comments.each do |c|
+-#   ="#{c.user.email} Replied: "
+-#   %quote=c.content
+-#   %br
+-# %br
+-# %br
+-# %br
+-# %br
+-# %strong='Add a comment'
+-# = form_for @comment do |c|
+-#   = c.hidden_field :photo_id, value: p[:photo].id
+-#   = c.hidden_field :user_id, value: @user.id
+-#   = c.text_area :content, :class => "form control"
+-#   %br
+-#   = c.submit 'Comment', :class => "btn btn-success pull-right"
+
+:javascript
+  window.onload = function() {
+    var photos = document.getElementsByTagName('img');
+    for (var p=0; p < photos.length; p++)
+      photos[p].addEventListener("mouseover", slideshow, false);
+  }
+  
+  function slideshow() {
+
+  }

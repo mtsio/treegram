@@ -1,0 +1,14 @@
+- @photosRes.each do |group|
+%div{ :id => group[0] }
+  %div{ :id => "slides" }
+    - group[1].each do |p|
+      -if p[:photo].user_id != @user.id
+        .well.col-sm-4
+          =link_to "<i class=\"glyphicon glyphicon-trash\"></i>".html_safe, user_photo_path(@user,p[:photo]), :method => 'delete', class: ["btn", "btn-danger", "btn-xs","pull-right"], data: { confirm: 'Are you sure?' }
+          %strong= p[:photo].title
+          = @user.email != p[:email] && "from user #{p[:email]}" || ""
+          %br
+          = image_tag p[:photo].image.url(:medium)
+          %br
+          %br
+
