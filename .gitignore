@@ -2,8 +2,6 @@ vendor/
 vendor/**
 tmp/
 tmp/**
-photos/
-photos/**
 lib/
 lib/**
 bin/
@@ -15,3 +13,4 @@ public/**
 *.sqlite3
 *.log
 *.rake*
+*.jpg
