@@ -1,20 +1,26 @@
 
 var Slider = {
     setup: function () {
+        if ($("#sliderWindow")[0] !== undefined) { // prevent again a load of the script
+            return;
+        }
         // add hidden 'div' to end of page to display Slider: 
         var sliderDiv = $('<div id="sliderWindow"></div>');
         sliderDiv.hide().appendTo($('body'));
         $('.galleryPhoto a').mouseover(Slider.getPhotoInfo);
+        // $('.galleryPhoto a').mouseout(Slider.hidePhotoInfo);
     }
     , getPhotoInfo: function (e) {
-
-        Slider.showPhotoInfo(`
-            <ul id="slides">
-                <li>Slide 1</li>
-                <li>Slide 2</li>
-            </ul>
-        `)
-        return;
+        if (!$('#sliderWindow').is(":hidden")) {
+            return;
+        }
+        // Slider.showPhotoInfo(`
+        //     <ul id="slides">
+        //         <li>Slide 1</li>
+        //         <li>Slide 2</li>
+        //     </ul>
+        // `)
+        // return;
         $(this).addClass("loading") // Add css loading
         $.ajax({
             type: 'GET',
@@ -35,29 +41,31 @@ var Slider = {
         $('#sliderWindow').
             css({ 'left': oneFourth, 'width': 2 * oneFourth, 'top': 250 }).
             html(data).
-            show();
+            fadeIn();
         Slider.startTheShow()
         // make the Close link in the hidden element work 
         $('#closeLink').click(Slider.hidePhotoInfo);
         return (false);  // prevent default link action 
     }
     , hidePhotoInfo: function () {
-        $('#sliderWindow').hide();
+        clearInterval(Slider.interval)
+        $('#sliderWindow').fadeOut();
         return (false);
     },
     startTheShow: function () {
-        setInterval(function() {
+        Slider.interval = setInterval(function () {
             Slider.move()
         }, 3000)
     },
-    move: function(){
+    move: function () {
         const slideWidth = $("#sliderWindow").width()
         $("#sliderWindow ul#slides").animate({
             left: -slideWidth
-        }, 200, function() {
+        }, 200, function () {
             $("#sliderWindow ul#slides li:first-child").appendTo('#sliderWindow ul#slides')
             $("#sliderWindow ul#slides").css('left', '')
         })
     },
+    interval: undefined,
 };
 $(Slider.setup);
