@@ -1,3 +1,5 @@
 %ul{:id => 'slides'}
     - @photosRes.each do |p|
-        %li= image_tag p[:photo].image.url(:medium)
+        %li
+            .div=  p[:photo].title
+            .div= image_tag p[:photo].image.url(:medium)

@@ -11,16 +11,10 @@ var Slider = {
         // $('.galleryPhoto a').mouseout(Slider.hidePhotoInfo);
     }
     , getPhotoInfo: function (e) {
+        // if is shown and we hover again dont do anything.
         if (!$('#sliderWindow').is(":hidden")) {
             return;
         }
-        // Slider.showPhotoInfo(`
-        //     <ul id="slides">
-        //         <li>Slide 1</li>
-        //         <li>Slide 2</li>
-        //     </ul>
-        // `)
-        // return;
         $(this).addClass("loading") // Add css loading
         $.ajax({
             type: 'GET',
@@ -44,7 +38,7 @@ var Slider = {
             fadeIn();
         Slider.startTheShow()
         // make the Close link in the hidden element work 
-        $('#closeLink').click(Slider.hidePhotoInfo);
+        // $('#sliderWindow').mouseout(Slider.hidePhotoInfo);
         return (false);  // prevent default link action 
     }
     , hidePhotoInfo: function () {
