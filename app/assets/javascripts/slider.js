@@ -37,6 +37,8 @@ var Slider = {
             html(data).
             fadeIn();
         Slider.startTheShow()
+        $('ul#slides li').on('click', () => { Slider.hidePhotoInfo() })
+
         // make the Close link in the hidden element work 
         // $('#sliderWindow').mouseout(Slider.hidePhotoInfo);
         return (false);  // prevent default link action 
@@ -44,12 +46,15 @@ var Slider = {
     , hidePhotoInfo: function () {
         clearInterval(Slider.interval)
         $('#sliderWindow').fadeOut();
+        $('#sliderWindow').html('');
         return (false);
     },
     startTheShow: function () {
-        Slider.interval = setInterval(function () {
-            Slider.move()
-        }, 3000)
+        if (!Slider.interval) {
+            Slider.interval = setInterval(function () {
+                Slider.move()
+            }, 3000)
+        }
     },
     move: function () {
         const slideWidth = $("#sliderWindow").width()
