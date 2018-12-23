@@ -14,7 +14,8 @@
       - p = group[1].first 
       -if p[:photo].user_id == @user.id
         %h3="My Photos"
-        = image_tag p[:photo].image.url(:thumb)
+        %div{:class => ['galleryPhoto']}
+          =link_to(image_tag(p[:photo].image.url(:thumb)), slides_user_path(p[:photo].user_id))
 
 %br/
 %br/
