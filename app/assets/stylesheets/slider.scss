@@ -4,9 +4,9 @@ div#sliderWindow {
 	border: 2px double grey;
     background: wheat;
     overflow: hidden;
+    height: 400px;
     
     ul#slides {
-        height: 200px;
         list-style: none;
         li {
             width: 100%;
