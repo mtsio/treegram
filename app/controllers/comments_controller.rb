@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
   def index
     @comments = Comment.all
+    if params['photo_id']
+      @photo = Photo.find(params[:photo_id])
+      @comment = Comment.new
+    end
   end
 
   def create
@@ -17,7 +21,8 @@ class CommentsController < ApplicationController
       flash[:notice]="User #{@user.email} added comment for photo \
                            #{@photo.title} at #{@comment.created_at}"
     end
-    redirect_to user_path(session[:user_id])
+    # redirect_to user_path(session[:user_id])
+    render json: @comment
   end
 
   private
