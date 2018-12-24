@@ -1,5 +1,6 @@
 
 var Slider = {
+    // Add slider window dom element to the body
     setup: function () {
         if ($("#sliderWindow")[0] !== undefined) { // prevent again a load of the script
             return;
@@ -10,6 +11,7 @@ var Slider = {
         $('.galleryPhoto a').mouseover(Slider.getPhotoInfo);
         // $('.galleryPhoto a').mouseout(Slider.hidePhotoInfo);
     }
+    // based on element href load the html data (slides) to show
     , getPhotoInfo: function (e) {
         // if is shown and we hover again dont do anything.
         if (!$('#sliderWindow').is(":hidden")) {
@@ -36,6 +38,7 @@ var Slider = {
             css({ 'left': oneFourth, 'width': 2 * oneFourth, 'top': 250 }).
             html(data).
             fadeIn();
+        // Start the interval
         Slider.startTheShow()
 
         // setup the handler here! because now we have loaded the dom elements.
@@ -57,6 +60,7 @@ var Slider = {
         return (false);
     },
     startTheShow: function () {
+        // Interval will execute the Slider move every 3 secs
         if (!Slider.interval) {
             Slider.interval = setInterval(function () {
                 Slider.move()
@@ -64,10 +68,13 @@ var Slider = {
         }
     },
     stopTheShow: function () {
+        // When we want to stop the slider, we clear it's interval.
         if (Slider.interval) {
             clearInterval(Slider.interval)
         }
     },
+    // What it does is to show only the first element of the list. So when we choose the first, we ad it in the end
+    // the next is coming but doing the left 0. 'sliding it out'
     move: function () {
         const slideWidth = $("#sliderWindow").width()
         $("#sliderWindow ul#slides").animate({
