@@ -37,7 +37,14 @@ var Slider = {
             html(data).
             fadeIn();
         Slider.startTheShow()
-        $('ul#slides li').on('click', () => { Slider.hidePhotoInfo() })
+
+        // setup the handler here! because now we have loaded the dom elements.
+        $('ul#slides li a').on('click', function(event) {
+            event.preventDefault()
+            Slider.stopTheShow()
+            Popup.getPhotoInfo($(this))
+            return (false)
+        })
 
         // make the Close link in the hidden element work 
         // $('#sliderWindow').mouseout(Slider.hidePhotoInfo);
@@ -54,6 +61,11 @@ var Slider = {
             Slider.interval = setInterval(function () {
                 Slider.move()
             }, 3000)
+        }
+    },
+    stopTheShow: function () {
+        if (Slider.interval) {
+            clearInterval(Slider.interval)
         }
     },
     move: function () {
