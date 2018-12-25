@@ -9,7 +9,7 @@ var Slider = {
         var sliderDiv = $('<div id="sliderWindow"></div>');
         sliderDiv.hide().appendTo($('body'));
         $('.galleryPhoto a').mouseover(Slider.getPhotoInfo);
-        // $('.galleryPhoto a').mouseout(Slider.hidePhotoInfo);
+        $('.galleryPhoto a').mouseout(Slider.hidePhotoInfo);
     }
     // based on element href load the html data (slides) to show
     , getPhotoInfo: function (e) {
