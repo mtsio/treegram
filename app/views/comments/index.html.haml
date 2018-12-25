@@ -1,0 +1,18 @@
+%strong='Comments: '
+%br
+- @photo.comments.each do |c|
+    ="#{c.user.email} Replied: "
+    %quote=c.content
+    %br
+%br
+%br
+%br
+%br
+%strong='Add a comment'
+= form_for @comment do |c|
+    = c.hidden_field :photo_id, value: @photo.id
+    = c.hidden_field :user_id, value: session[:user_id]
+    = c.text_area :content, :class => "form control"
+    %br
+    = c.submit 'Comment', :class => "btn btn-success"
+%button{:class => ['btn','btn-danger'], :id => 'closeLink'}= 'Close' 

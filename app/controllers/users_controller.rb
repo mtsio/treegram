@@ -45,6 +45,20 @@ class UsersController < ApplicationController
     @comment = Comment.new
   end
 
+  def slides
+    @users = User.all
+    @user = User.find(params[:id])
+    @followingUsers = @user.relations.all
+
+    @photosRes = Array.new
+    @photosRes << @user.photos
+          .flat_map {|p| {:email => @user.email, :photo => p}}
+
+    @photosRes = @photosRes.flatten.sort{|a,b| b[:photo].created_at \
+                                          <=> a[:photo].created_at}
+    @comment = Comment.new
+  end
+
   private
 
     def user_params

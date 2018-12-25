@@ -1,0 +1,5 @@
+%ul{:id => 'slides'}
+    - @photosRes.each do |p|
+        %li
+            .div=  p[:photo].title
+            .div=link_to(image_tag(p[:photo].image.url(:medium)), photo_comments_path(p[:photo].id))
