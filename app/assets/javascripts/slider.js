@@ -8,6 +8,10 @@ var Slider = {
         // add hidden 'div' to end of page to display Slider: 
         var sliderDiv = $('<div id="sliderWindow"></div>');
         sliderDiv.hide().appendTo($('body'));
+	// $.each($('.galleryPhoto a'), function() {
+	//     $(this).attr('a').mouseover(Slider.getPhotoInfo);
+	//     $(this).mouseout(Slider.hidePhotoInfo);
+	// });
         $('.galleryPhoto a').mouseover(Slider.getPhotoInfo);
         $('.galleryPhoto a').mouseout(Slider.hidePhotoInfo);
     }

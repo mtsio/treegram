@@ -37,9 +37,12 @@
         %strong= p[:photo].title
         = @user.email != p[:email] && "from user #{p[:email]}" || ""
         %br
-        = image_tag p[:photo].image.url(:medium)
+        %div{:class => ['galleryPhoto']}
+          =link_to(image_tag(p[:photo].image.url(:medium)), slides_user_path(p[:photo].user_id))
+          -# = image_tag p[:photo].image.url(:medium)
         %br
         %br
+
   -# = form_for @tag do |f|
   -#   = f.hidden_field :photo_id, value: p[:photo].id
   -#   = f.collection_select :user_id, @users, :id, :email
