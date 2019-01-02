@@ -60,12 +60,21 @@ var Slider = {
         return (false);
     },
     startTheShow: function () {
-        // Interval will execute the Slider move every 3 secs
-        if (!Slider.interval) {
-            Slider.interval = setInterval(function () {
-                Slider.move()
-            }, 3000)
-        }
+	var slidesNode = $('ul#slides li');
+	var imageNode = $('ul#slides li:first-child').find('img');
+	var slides = slidesNode.find('img');
+	console.log(slides);
+	var image, imageCounter = 1;
+	if (!Slider.interval) {
+	    Slider.interval = setInterval (function () {
+		imageCounter = (imageCounter + 1) % slides.length;
+		if (!imageCounter) imageCounter = 1;
+		
+		console.log(imageCounter);
+		image = slides[imageCounter]; 
+		imageNode[0].src = image.src;
+	    }, 1500)
+	}
     },
     stopTheShow: function () {
         // When we want to stop the slider, we clear it's interval.
@@ -73,17 +82,5 @@ var Slider = {
             clearInterval(Slider.interval)
         }
     },
-    // What it does is to show only the first element of the list. So when we choose the first, we ad it in the end
-    // the next is coming but doing the left 0. 'sliding it out'
-    move: function () {
-        const slideWidth = $("#sliderWindow").width()
-        $("#sliderWindow ul#slides").animate({
-            left: -slideWidth
-        }, 200, function () {
-            $("#sliderWindow ul#slides li:first-child").appendTo('#sliderWindow ul#slides')
-            $("#sliderWindow ul#slides").css('left', '')
-        })
-    },
-    interval: undefined,
 };
 $(Slider.setup);
