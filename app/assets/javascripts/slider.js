@@ -26,7 +26,7 @@ var Slider = {
                 $(this).removeClass("loading") // remove css loading
                 Slider.showPhotoInfo(data, requestStatus, xhrObject)
             },
-            error: function (xhrObj, textStatus, exception) { alert('Error!'); }
+            error: function (xhrObj, textStatus, exception) { alert('Error!');}
             // 'success' and 'error' functions will be passed 3 args 
         });
         return (false);
@@ -61,18 +61,14 @@ var Slider = {
     },
     startTheShow: function () {
 	var slidesNode = $('ul#slides li');
-	var imageNode = $('ul#slides li:first-child').find('img');
-	var slides = slidesNode.find('img');
-	console.log(slides);
+	var imageNode = $('ul#slides li:first-child');
 	var image, imageCounter = 1;
+
 	if (!Slider.interval) {
 	    Slider.interval = setInterval (function () {
 		imageCounter = (imageCounter + 1) % slides.length;
 		if (!imageCounter) imageCounter = 1;
-		
-		console.log(imageCounter);
-		image = slides[imageCounter]; 
-		imageNode[0].src = image.src;
+		imageNode[0].innerHTML = slidesNode[imageCounter].innerHTML;
 	    }, 1500)
 	}
     },
