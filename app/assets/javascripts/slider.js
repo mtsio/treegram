@@ -62,11 +62,11 @@ var Slider = {
     startTheShow: function () {
 	var slidesNode = $('ul#slides li');
 	var imageNode = $('ul#slides li:first-child');
-	var image, imageCounter = 1;
+	var imageCounter = 1;
 
 	if (!Slider.interval) {
 	    Slider.interval = setInterval (function () {
-		imageCounter = (imageCounter + 1) % slides.length;
+		imageCounter = (imageCounter + 1) % slidesNode.length;
 		if (!imageCounter) imageCounter = 1;
 		imageNode[0].innerHTML = slidesNode[imageCounter].innerHTML;
 	    }, 1500)
