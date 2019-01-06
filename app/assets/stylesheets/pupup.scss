@@ -3,7 +3,7 @@ div#photoInfo {
 	position: absolute;
 	border: 2px double grey;
     background: wheat;
-    overflow: hidden;
+    overflow: scroll;
     height: 400px;
     z-index: 999;
 }
