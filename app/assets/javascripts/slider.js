@@ -54,6 +54,9 @@ var Slider = {
         return (false);  // prevent default link action 
     }
     , hidePhotoInfo: function () {
+        if (!$('#photoInfo').is(":hidden")) {
+            return;
+        }
         clearInterval(Slider.interval)
         $('#sliderWindow').fadeOut();
         $('#sliderWindow').html('');
